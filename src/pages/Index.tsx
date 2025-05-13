@@ -1,11 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Navbar from "@/components/Navbar";
+import SecurityHero from "@/components/SecurityHero";
+import ThreatSection from "@/components/ThreatSection";
+import ResourcesSection from "@/components/ResourcesSection";
+import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="min-h-screen font-roboto">
+      <Navbar />
+      <div className="pt-16"> {/* Adding padding-top to account for fixed navbar */}
+        <SecurityHero />
+        <ThreatSection />
+        <ResourcesSection />
+        <FooterSection />
       </div>
     </div>
   );
